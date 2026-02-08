@@ -207,6 +207,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    text-align: left;
 }
 
 .profile-img {
@@ -822,6 +823,22 @@ body {
     .header-content img {
         height: 70px;
         width: 70px;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-text {
+        text-align: center;          /* center text on mobile */
+        padding: 0 1rem;             /* add horizontal padding */
+        gap: 1.5rem;                 /* more spacing between paragraphs */
+    }
+
+    .about-text p {
+        font-size: 1rem;             /* adjust font size for mobile */
+        line-height: 1.6;            /* improve readability */
     }
 
     .nav-links {
