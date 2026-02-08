@@ -1,0 +1,25 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light{
+    background-color: white;
+    color: black;
+}
+
+.dark{
+    background-color: black;
+    color: white;
+}
+
+button{
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: aqua;
+    border: 4px dashed red;
+}

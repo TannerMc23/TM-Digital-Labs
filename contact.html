@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanner McMillan - Contact</title>
+    <meta name="description" content="Portfolio website for Tanner McMillan | Contact Page">
+    <meta name="author" content="Tanner McMillan">
+    <link rel="stylesheet" href="styles/personal.css">
+    <script src="scripts/personal.js" defer></script>
+    <link rel="icon" href="images/logo.svg">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="index.html"><img src="images/logo.svg" alt="TM Digital Lab Logo" height="60" width="60"></a>
+            <h1 class="logo">TM Digital Labs</h1>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home/About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="pricing.html">Services & Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+
+        <section class="contact-hero">
+            <h1>Let’s Work Together</h1>
+            <p>
+                Need a website or updates to an existing one?
+                Send me a message and I’ll get back to you shortly.
+            </p>
+        </section>
+        <section class="contact-form-section">
+            <h2 class="contactMe">Send Me a Message</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="45f9dccb-f75a-4e60-9f78-fceb3e280c80">
+
+                <input type="hidden" name="subject" value="New Website Inquiry">
+                <input type="hidden" name="from_name" value="Portfolio Website">
+                <input type="hidden" name="redirect" value="thankyou.html">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="5" placeholder="Tell me about your project..."
+                        required></textarea>
+                </div>
+
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+                <button type="submit" class="primary-btn">Send Message</button>
+            </form>
+        </section>
+        <section class="contact-grid">
+
+            <div class="contact-box">
+                <h2>Phone</h2>
+                <a href="tel:18016605975">801-660-5975</a>
+            </div>
+
+            <div class="contact-box">
+                <h2>Email</h2>
+                <a href="mailto:tannermcmillan23@gmail.com">
+                    tannermcmillan23@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-box">
+                <h2>Location</h2>
+                <p>Ogden, Utah</p>
+            </div>
+
+        </section>
+
+        <section class="contact-socials">
+            <h2>Connect With Me</h2>
+
+            <div class="social-grid">
+                <a href="https://www.linkedin.com/in/tanner-mcmillan-043a56310/" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn">
+                    <span>LinkedIn</span>
+                </a>
+
+                <a href="https://github.com/TannerMc23" target="_blank">
+                    <img src="images/github.svg" alt="GitHub">
+                    <span>GitHub</span>
+                </a>
+
+                <a href="https://www.facebook.com/tanner.mcmillan.395/" target="_blank">
+                    <img src="images/facebook.svg" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <p>©️<span id="currentyear"></span> TM Digital Labs | Tanner McMillan | Ogden, Utah</p>
+    </footer>
+</body>
+
+</html>
