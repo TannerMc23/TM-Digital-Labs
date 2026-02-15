@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jacob Eckardt Golf Lessons | Lessons</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/lessons.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/Jacob-Eckardt-logo.svg" alt="Jacob Eckardt Logo">
+                    <span>Jacob Eckardt</span>
+                </a>
+            </div>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="lessons.html">Lessons</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- Hero -->
+    <main>
+        <section class="hero hero-lessons">
+            <div class="container">
+                <h1>Golf Lessons</h1>
+                <p>
+                    Personalized instruction designed to help you build a consistent,
+                    confident golf swing — whether you're new to the game or looking to
+                    play at a higher level.
+                </p>
+            </div>
+        </section>
+
+        <!-- Lesson Types -->
+        <section class="lessons-overview">
+            <div class="container">
+                <h2>Lesson Options</h2>
+
+                <div class="lessons-grid">
+                    <div class="card">
+                        <h3>Individual Lessons</h3>
+                        <p>
+                            One-on-one coaching focused entirely on your swing,
+                            mechanics, and improvement goals.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Partner Lessons</h3>
+                        <p>
+                            Train with a friend or family member while receiving
+                            personalized feedback and instruction.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Group Lessons</h3>
+                        <p>
+                            Small group sessions that combine instruction,
+                            drills, and structured practice in a supportive setting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="pricing">
+            <div class="container">
+                <h2>Lesson Pricing</h2>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Individual</h3>
+                        <p class="price">$100<span>/hour</span></p>
+                        <ul>
+                            <li>Personalized swing analysis</li>
+                            <li>Video & feedback</li>
+                            <li>Practice plan included</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <h3>2 Golfers</h3>
+                        <p class="price">$120<span>/hour</span></p>
+                        <ul>
+                            <li>Shared instruction</li>
+                            <li>Individual feedback</li>
+                            <li>Great for friends/couples</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3>3+ Golfers</h3>
+                        <p class="price">$40<span>/person</span></p>
+                        <ul>
+                            <li>Small group coaching</li>
+                            <li>Drills & skill work</li>
+                            <li>Fun learning environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included -->
+        <section class="included">
+            <div class="container">
+                <h2>What’s Included in Every Lesson</h2>
+
+                <div class="included-grid">
+                    <div class="included-item">Launch monitor data</div>
+                    <div class="included-item">Video swing analysis</div>
+                    <div class="included-item">Personalized drills</div>
+                    <div class="included-item">Practice guidance</div>
+                    <div class="included-item">Goal tracking</div>
+                    <div class="included-item">Progress feedback</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <h2>Book Your Lesson</h2>
+                <p>Start improving your game with structured, personalized coaching.</p>
+                <button class="btn-primary" id="openBooking">Book a Lesson</button>
+            </div>
+        </section>
+    </main>
+    <!-- Booking Modal -->
+    <!-- Booking Modal -->
+    <div class="booking-modal" id="bookingModal">
+        <div class="booking-content">
+            <button class="close-modal" id="closeBooking">✕</button>
+
+            <h2>Schedule a Lesson</h2>
+
+            <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+
+                <label>Name</label>
+                <input type="text" name="name" required>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+                <label>Lesson Type</label>
+                <select name="lesson_type" required>
+                    <option value="">Select</option>
+                    <option>Individual</option>
+                    <option>2 Golfers</option>
+                    <option>3+ Golfers</option>
+                </select>
+
+                <label>Select Date</label>
+                <input type="date" id="lessonDate" name="date" required>
+
+                <label>Available Times</label>
+                <div id="timeSlots" class="time-slots">
+                    <p class="time-placeholder">Select a date to see times</p>
+                </div>
+
+                <input type="hidden" id="selectedTime" name="time">
+
+                <button type="submit" class="btn-primary">Book Lesson</button>
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>©️<span id="currentyear"></span> Jacob Eckardt | Washington</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
