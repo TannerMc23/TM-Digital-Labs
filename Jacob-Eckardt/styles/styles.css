@@ -462,12 +462,12 @@ section {
 }
 
 .time-slot-btn {
+    padding: 0.5rem 0.8rem;
     border: 1px solid var(--color-border);
-    background: var(--color-gray);
-    padding: 0.5rem 0.75rem;
+    background: white;
     border-radius: 6px;
-    font-size: 0.9rem;
     cursor: pointer;
+    font-size: 0.9rem;
     transition: all 0.2s ease;
 }
 
